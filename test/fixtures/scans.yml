@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  path: MyString
+  scandate: 2019-10-17
+  case: one
+
+two:
+  path: MyString
+  scandate: 2019-10-17
+  case: two

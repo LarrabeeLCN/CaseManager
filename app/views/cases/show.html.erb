@@ -12,6 +12,22 @@
 	<%= @case.blocked %>
 </p>
 
+<h3>Scans:</h3>
+
+<% @case.scans.each do |scan| %>
+
+	<p> <strong>Path:</strong> <%= scan.path %> </p>
+	<p> <strong>Scan date: </strong> <%= scan.scandate %> </p>
+
+<% end %>
+
+
+
+<hr>
+<p> <strong>Add Scan</strong> </p>
+<%= render 'scans/form' %> 
+
 
 <p> <%= link_to 'Edit', edit_case_path(@case) %> </p>
+<p> <%= link_to 'Destroy', case_path(@case), method: :delete, data: {confirm: 'Are you sure?'} %> </p>
 <p> <%= link_to 'Case list', cases_path %> </p>
