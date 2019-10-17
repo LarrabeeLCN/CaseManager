@@ -1,0 +1,19 @@
+<h1>Listing cases</h1>
+
+<table>
+	<tr>
+		<th>Case ID</th>
+		<th></th>
+	</tr>
+
+	<% @cases.each do | onecase | %>
+	<tr>
+		<td> <%= onecase.caseid %> </td>
+		<td> <%= link_to 'Go to', case_path(onecase) %> </td>
+	</tr>
+
+	<% end %>
+</table>
+
+<p> <%= link_to 'New case', new_case_path %> </p>
+<p> <%= link_to 'Home', root_path %> </p>

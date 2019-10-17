@@ -1,0 +1,17 @@
+<p>
+	<strong>Case ID</strong>
+	<%= @case.caseid %>
+
+	<strong>Hemi</strong>
+	<%= @case.hemi %>
+
+	<strong>Age</strong>
+	<%= @case.age %>
+
+	<strong>Blocked?</strong>
+	<%= @case.blocked %>
+</p>
+
+
+<p> <%= link_to 'Edit', edit_case_path(@case) %> </p>
+<p> <%= link_to 'Case list', cases_path %> </p>

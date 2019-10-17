@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  caseid: MyString
+  hemi: 1
+  age: 
+  blocked: 
+
+two:
+  caseid: MyString
+  hemi: 1
+  age: 
+  blocked: 

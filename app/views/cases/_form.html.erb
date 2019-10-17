@@ -1,0 +1,39 @@
+
+<%= form_with model: @case, local: true do |form| %>
+	
+	<% if @case.errors.any? %>
+	<div id="error_explanation">
+		<h2> <%= pluralize(@case.errors.count, "error") %> prohibited this case from being saved</h2>
+		<ul>
+			<% @case.errors.full_messages.each do |msg| %>
+			<li> <%= msg %> </li>
+			<% end %>
+		</ul>
+	</div>
+
+	<% end %>
+
+
+
+	<p>
+		<%= form.label :caseid %>
+		<%= form.text_field :caseid %> 
+	</p>
+	<p>
+		<%= form.label :hemi %>
+		<%= form.select :hemi, Case.hemis.keys.to_a %>
+	</p>
+	<p>
+		<%= form.label :age %>
+		<%= form.number_field :age %>
+	</p>
+	<p>
+		<%= form.label :blocked %>
+		<%= form.check_box :blocked %>
+	</p>
+	<p>
+		<%= form.submit %>
+	</p>
+	
+
+<% end %>
