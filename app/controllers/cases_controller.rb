@@ -25,7 +25,7 @@ class CasesController < ApplicationController
 
 
 		if @case.save
-			redirect_to @case
+			redirect_to root_path
 		else
 			render 'new'
 		end

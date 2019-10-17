@@ -1,3 +1,41 @@
 <h1>Case manager</h1>
+<h2>Cases</h2>
+<table>
+	<tr>
+		<th>Case ID</th>
+		<th>Scan Protocol</th>
+		<th>Scan Date</th>
+		<th>Scan Weight</th>
+		<th>Scan Path</th>
+	</tr>
+
+<% @cases.each do |onecase| %>
+	<tr> <td> <%= onecase.caseid %></td> </tr>
+
+
+	<% onecase.scans.each_with_index do |scan, idx| %>
+	<tr>
+		<td> </td>
+		<td> <%= scan.protocol.name %> </td>
+		<td> <%= scan.scandate %> </td>
+		<td> <%= scan.protocol.weight %> </td>
+		<td> <%= scan.path %> </td>
+	</tr>
+
+	<% end %>
+	<tr> <td></td> <td> <%=link_to 'New Scan', new_case_scan_path(onecase) %> </td> </tr>
+
+<% end %>
+
+<tr> <td> <%= link_to 'New case', new_case_path %> </td> </tr>
+
+
+</table>
+
+
+
+
+
+
 <p> <%= link_to 'See case list', controller:'cases' %> </p>
 <p> <%= link_to 'See protocol list', controller:'protocols' %> </p>
