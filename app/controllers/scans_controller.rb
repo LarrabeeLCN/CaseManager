@@ -8,7 +8,7 @@ class ScansController < ApplicationController
 	def create
 		@case  = Case.find(params[:case_id])
 		@scan = @case.scans.create(scan_params)
-		redirect_to case_path(@case)
+		redirect_to home_index_url
 	end
 
 	private
